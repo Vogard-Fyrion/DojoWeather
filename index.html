@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="flex width spc-btw align-center">
+            <h1
+                class="title">
+                DojoWeather
+            </h1>
+            <div class="cities flex">
+                <h2 onclick="alert('Loading weather report...')" class="pad">
+                    Burbank
+                </h2>
+                <h2 onclick="alert('Loading weather report...')" class="pad">
+                    Chicago
+                </h2>
+                <h2 onclick="alert('Loading weather report...')" class="pad">
+                    Dallas
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="width">
+        <!-- city -->
+        <div class="flex spc-btw align-center pad-tb border-b margin-b">
+            <h1>
+                San Jose
+            </h1>
+            <div class="flex">
+                <p class="margin-r">
+                    show temperature in
+                </p>
+                <select onchange="temperature(this)" name="temperature" id="temperature">
+                    <option>°F</option>
+                    <option>°C</option>
+                </select>
+            </div>
+        </div>
+        <!-- daily report -->
+        <div class="flex margin-b2">
+            <div class="t-align col-1 grey-bc pad margin-r">
+                <h2 class="margin-b">
+                    Today
+                </h2>
+                <img 
+                    class="img margin-b"
+                    src="assets/some_rain.png" 
+                    alt="raincloud">
+                <p class="margin-b2">some rain</p>
+                <div class="flex spc-btw pad-lr">
+                    <h3 class="hi">
+                        °<span id="temp">75</span>
+                    </h3>
+                    <h3 class="low">
+                        °<span id="temp">65</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="t-align col-1 grey-bc pad margin-r">
+                <h2 class="margin-b">
+                    Tomorrow
+                </h2>
+                <img 
+                    class="img margin-b"
+                    src="assets/some_sun.png" 
+                    alt="sun">
+                <p class="margin-b2">some sun</p>
+                <div class="flex spc-btw pad-lr">
+                    <h3 class="hi">
+                        °<span id="temp">80</span>
+                    </h3>
+                    <h3 class="low">
+                        °<span id="temp">66</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="t-align col-1 grey-bc pad margin-r">
+                <h2 class="margin-b">
+                    Friday
+                </h2>
+                <img 
+                    class="img margin-b"
+                    src="assets/some_clouds.png" 
+                    alt="clouds">
+                <p class="margin-b2">some clouds</p>
+                <div class="flex spc-btw pad-lr">
+                    <h3 class="hi">
+                        °<span id="temp">69</span>
+                    </h3>
+                    <h3 class="low">
+                        °<span id="temp">61</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="t-align col-1 grey-bc pad">
+                <h2 class="margin-b">
+                    Saturday
+                </h2>
+                <img 
+                    class="img margin-b"
+                    src="assets/some_sun.png" 
+                    alt="sun">
+                <p class="margin-b2">some sun</p>
+                <div class="flex spc-btw pad-lr">
+                    <h3 class="hi">
+                        °<span id="temp">78</span>
+                    </h3>
+                    <h3 class="low">
+                        °<span id="temp">70</span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- cookie alert -->
+        <div id="alert" class="cookie-alert flex spc-btw align-center pad grey-bc border">
+            <img src="assets/cookie.png" alt="cookie">
+            <div>
+                <h2>Stop! Cookie time</h2>
+                <p>We use cookies (sadly not the edible ones) to personalize
+                    content and ads, to provied social media features and to<br>
+                    analyse our traffic. 
+                <a href="#">Read more...</a>
+                </p>
+            </div>
+            <button onclick="remove('#alert')" class="btn">I accept</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
